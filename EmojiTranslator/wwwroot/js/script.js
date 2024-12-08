@@ -196,7 +196,6 @@
     "desert": "🏜️",
     "forest": "🌲",
     "jungle": "🌴",
-    "flower": "🌸", "
 };
 
 function translate() {
@@ -220,6 +219,7 @@ function toggleDarkMode() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector("button").addEventListener("click", translate);
+    document.querySelector("button[onclick='translate()']").addEventListener("click", translate);
+    document.querySelector("button[onclick='toggleDarkMode()']").addEventListener("click", toggleDarkMode);
 });
 
