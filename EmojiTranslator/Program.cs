@@ -28,10 +28,6 @@ namespace EmojiTranslator
 
             app.MapRazorPages();
 
-            // Set the port and add the URL to the app.Urls collection
-            var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
-            app.Urls.Add($"http://*:{port}");
-
             app.Run();
         }
     }

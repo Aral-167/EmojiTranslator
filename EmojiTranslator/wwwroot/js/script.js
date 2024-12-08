@@ -196,6 +196,7 @@
     "desert": "🏜️",
     "forest": "🌲",
     "jungle": "🌴",
+    "flower": "🌸", "
 };
 
 function translate() {
