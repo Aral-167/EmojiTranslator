@@ -27,7 +27,7 @@ body {
 
 .translator-container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 0 auto 0 auto;
     padding: 30px;
     background-color: #fff;
     border-radius: 8px;

@@ -199,7 +199,6 @@
 };
 
 function translate() {
-    alert("Translate button clicked!");
     const inputText = document.getElementById("inputText").value;
     const words = inputText.split(" ");
     const translated = words
