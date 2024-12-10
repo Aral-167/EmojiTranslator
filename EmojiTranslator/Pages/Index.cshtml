@@ -8,20 +8,21 @@
 <div class="translator-container">
     <textarea id="inputText" placeholder="Type your text here... (In letters)" rows="5" cols="40"></textarea>
     <br>
-    <button onclick="translate()">Translate</button>
+    <br>
+    <button id="translateButton">Translate</button>
     <p id="output"></p>
     <br>
-    <button onclick="toggleDarkMode()">Dark Mode</button>
 </div>
 
 <!-- Include JavaScript -->
 <script src="js/script.js"></script>
 
+
 <style>
     .translator-container {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -29,7 +30,7 @@
     }
 
     textarea {
-        width: 80%; /* Adjust the width as needed */
+        width: 90%;
         padding: 15px;
         font-size: 16px;
         border: 2px solid #ccc;
@@ -39,13 +40,11 @@
         resize: none;
     }
 
-        textarea:focus {
-            border-color: #4caf50;
-            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-            outline: none;
-        }
-
-
+    textarea:focus {
+        border-color: #4caf50;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        outline: none;
+    }
 
     button {
         padding: 12px 25px;
@@ -59,17 +58,17 @@
         transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
 
-        button:hover {
-            background-color: #388e3c;
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    button:hover {
+        background-color: #388e3c;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        button:active {
-            background-color: #2e7d32;
-            transform: scale(1);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+    button:active {
+        background-color: #2e7d32;
+        transform: scale(1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
     p#output {
         margin-top: 20px;
@@ -79,4 +78,3 @@
         animation: fadeIn 1s ease-in-out;
     }
 </style>
-
