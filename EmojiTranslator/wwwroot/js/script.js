@@ -195,31 +195,42 @@
     "island": "🏝️",
     "desert": "🏜️",
     "forest": "🌲",
-    "jungle": "🌴",
+    "jungle": "🌴"
 };
 
 function translate() {
+    alert("Translate button clicked!");
     const inputText = document.getElementById("inputText").value;
     const words = inputText.split(" ");
-    const translated = words.map(word => {
-        const lowerWord = word.toLowerCase();
-        return emojiDict[lowerWord] || emojiDict[lowerWord.replace(/s$/, '')] || word;
-    }).join(" ");
+    const translated = words
+        .map(word => {
+            const lowerWord = word.toLowerCase();
+            return (
+                emojiDict[lowerWord] ||
+                emojiDict[lowerWord.replace(/s$/, '')] ||
+                word
+            );
+        })
+        .join(" ");
     document.getElementById("output").innerText = translated;
 }
 
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    document.querySelector('.header').classList.toggle('dark-mode');
-    document.querySelector('.translator-container').classList.toggle('dark-mode');
-    document.querySelector('textarea').classList.toggle('dark-mode');
-    document.querySelectorAll('button').forEach(button => button.classList.toggle('dark-mode'));
-    document.getElementById('output').classList.toggle('dark-mode');
-    document.querySelector('.footer').classList.toggle('dark-mode');
-}
 
+/*function toggleDarkMode() {
+    alert("hello aral - toggleDarkMode() fired");
+    document.body.classList.toggle("dark-mode");
+    document.querySelector(".header").classList.toggle("dark-mode");
+    document.querySelector(".translator-container").classList.toggle("dark-mode");
+    document.querySelector("textarea").classList.toggle("dark-mode");
+    document.querySelectorAll("button").forEach(button => button.classList.toggle("dark-mode"));
+    document.getElementById("output").classList.toggle("dark-mode");
+    document.querySelector(".footer").classList.toggle("dark-mode");
+}*/
+
+// Remove onclick attributes from HTML buttons
+// Add event listeners in JavaScript
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector("button[onclick='translate()']").addEventListener("click", translate);
-    document.querySelector("button[onclick='toggleDarkMode()']").addEventListener("click", toggleDarkMode);
+    console.log("Document is loaded");
+    document.getElementById("translateButton").addEventListener("click", translate);
 });
 
